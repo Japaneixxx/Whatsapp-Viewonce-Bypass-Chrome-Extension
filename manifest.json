@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Bypass de Visualização unica",
+    "version": "1.0.0",
+    "description": "Ver midia de visualização unica",
+    "icons": {
+    },
+    "default_locale": "en",
+    "background": {
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "injector.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "resources": [
+                "script.js"
+            ]
+        }
+    ]
+}
